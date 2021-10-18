@@ -1,0 +1,1 @@
+{"name":"Local: maxcircularsubarray","url":"c:\\Users\\rrai1\\Documents\\codes\\C++\\dsa\\maxcircularsubarray.cpp","tests":[{"id":1631125844615,"input":"7\n4 -4 6 -6 10 -11 12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\rrai1\\Documents\\codes\\C++\\dsa\\maxcircularsubarray.cpp","group":"local","local":true}
