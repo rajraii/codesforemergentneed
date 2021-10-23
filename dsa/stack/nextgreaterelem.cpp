@@ -28,7 +28,7 @@ int main(){
   //}
 
 
-  //Optimal apparoach with O(n)
+  //Optimal apparoach with O(n^2)
 
   stack<int> s;
   s.push(v[n-1]);
