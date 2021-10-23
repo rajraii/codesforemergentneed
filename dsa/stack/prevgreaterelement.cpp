@@ -17,7 +17,7 @@ int main(){
   for(int i=0;i<n;i++){
     int j;
     for(j=i-1;j>=0;j--){
-      if(a[j]>a[i]) {
+      while(a[j]>a[i]) {
         cout<<a[j]<<" ";
         break;
       }
