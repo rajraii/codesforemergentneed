@@ -16,16 +16,16 @@ int main(){
   int k=3;
   stack<int> s;
   for(int i=0;i<k;i++){
-    s.push(q.front());
+    s.push(q.front());  
     q.pop();
   }
   while(!s.empty()){
-    q.push(s.top());
+    q.push(s.top());  //40 50 30 20 10 
     s.pop();
   }
   for(int i=0;i<q.size()-k;i++){
-    q.push(q.front());
-    q.pop();
+    q.push(q.front());  // 40 50 30 20 10 40
+    q.pop();  // 50 30 20 10 40
   }
   while(!q.empty()){
     cout<<q.front()<<" ";

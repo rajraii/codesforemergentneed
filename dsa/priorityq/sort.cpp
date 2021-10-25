@@ -4,12 +4,11 @@
 #include<vector>
 using namespace std;
 int main(){
-  vector<int> v={1,2,3,4,5};
+  vector<int> v={18,-9,45,15,18};
   // set<int>s;
   // for(int i=0;i<5;i++) s.insert(a[i]);
   // cout<<*s.begin()<<;
-  priority_queue<int> p;
-  for(auto i: v) p.push(i);
+  priority_queue<int> p(v.begin(),v.end());
   while(!p.empty()) {
     cout<<p.top()<<" ";
     p.pop();
