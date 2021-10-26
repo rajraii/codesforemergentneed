@@ -1,0 +1,1 @@
+{"name":"Local: itemprices","url":"d:\\Github\\codesforemergentneed\\dsa\\map\\itemprices.cpp","tests":[{"id":1635252391136,"input":"1 apple\n2 banana\n3 kadhual\n4 mango\n5 papaya","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Github\\codesforemergentneed\\dsa\\map\\itemprices.cpp","group":"local","local":true}
