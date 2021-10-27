@@ -28,3 +28,14 @@ int main(){
   }
   return 0;
 }
+
+// Efficent Approach
+
+// int main(){
+//   int n=5, sum=5;
+//   set<int> s;
+//   for(int i=0;i<n;i++){
+//     if(s.find(sum-a[i])!=s.end()) return 1;
+//     else s.insert(a[i])
+//   }
+// }
