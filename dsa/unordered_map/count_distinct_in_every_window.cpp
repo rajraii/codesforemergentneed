@@ -54,5 +54,6 @@ int main(){
     m[v[i-k]]--;
     if(m[v[i-k]]==0) m.erase(v[i-k]);
     m[v[i]]++;
+    cout<<m.size()<<" ";
   }  
 }

@@ -20,7 +20,7 @@ int main(){
       winner=i.first;
     }
     else if(i.second==freq && i.first<winner){
-      winner=i.first;
+      winner=i.first; // If there are similar freq element we choose lexicographical winner
     }
   }
   cout<<winner;
