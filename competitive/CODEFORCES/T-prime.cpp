@@ -7,16 +7,12 @@ const int MAX=1000001;
 bool prime[MAX];
 
 void sieve(){
-  int i,j;
-  prime[0]=prime[1]=true;
-  for(i=4;i<MAX;i+=2)
-    prime[i]=true;
-  for(i=3;i<=MAX;i++){
-    if(!prime[i]){
-      for(j=i+i;j<MAX;j+=2*i)
-        prime[j]=true;
+  for(int i=2; i*i<=MAX;i++){
+    if(prime[i]==true){
+      for(int j=i*i;j<=MAX;j+=i)
+        prime[j]=false;
     }
-  }  
+  } 
 }
 
 int main(){
