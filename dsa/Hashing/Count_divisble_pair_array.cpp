@@ -18,7 +18,7 @@ int main(){
 // create a hash table 
 // find the maximum
 //  find the multiple of element and if there are increment count
-
+// TC n*max/min
 int main(){
   int a[]={1,2,3,6,5,7,8};
   int n=7;
