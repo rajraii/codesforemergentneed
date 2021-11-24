@@ -31,3 +31,18 @@ node* delet(node *head){
   delete temp;
   return head;
 }
+
+// !delet last
+node* deletelast(node*head){
+  if(head==NULL) return NULL;
+  if(head->next==NULL){
+    delete head;
+    return NULL;
+  }
+  node*curr=head;
+  while(curr!=NULL) 
+    curr=curr->next;
+  curr->prev->next=NULL;
+  delete curr;
+  return head;
+} 
