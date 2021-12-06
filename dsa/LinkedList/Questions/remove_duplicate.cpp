@@ -22,3 +22,4 @@ void remove(node *head){
     else curr=curr->next;
   }
 }
+
