@@ -1,6 +1,6 @@
 // Find the intersection point of two linked list
 
-#include<ios>
+#include<iostream>
 using namespace std;
 
 struct Node {
@@ -9,6 +9,8 @@ struct Node {
 };
 
 //  ! Naive hashing TC O(m+n) AC O(m)
+
+// ! better approach - Visited flag
 
 // ! Efficient count length 
 
