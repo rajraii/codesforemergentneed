@@ -16,6 +16,11 @@ vector<vector<int>> generate(int numRows) {
     }
 
 int main(){
-
+    int n; cin>>n;
+    vector<vector<int>> res= generate(n);
+    for(int i=0;i<res.size();i++){
+        for(int j=0;j<res[0].size();j++)
+            cout<<res[i][j]<<" ";
+    }
 return 0;
 }
