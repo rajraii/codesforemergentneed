@@ -28,7 +28,7 @@ void check(int a[], int n){
   for(int i=n-2;i>=0;i--){
     while(s.empty()==false && s.top()<=a[i]) s.pop();
     int next= (s.empty()) ? (-1) : (s.top());
-    // cout<<next<<" ";  print in reverse order
+    cout<<next<<" ";  //print in reverse order
     s.push(a[i]);
   }
 }
