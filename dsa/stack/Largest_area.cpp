@@ -62,29 +62,17 @@ void findE(int a[], int n)
 void findj(int a[], int n)
 {
   stack<int> s;
-  int maxarea = 0;
-  int tp;
-  int area;
-  int i = 0;
-  while (i < n)
-  {
-    if (s.empty() || a[s.top()] <= a[i])
-      s.push(i++);
-    else
-    {
-      tp = s.top();
+  int maxA = 0;
+  for(int i=0;i<=n;i++){
+    while( !s.empty() && (i==n || a[s.top()] >= a[i])){
+      int height = a[s.top()];
       s.pop();
-      area = a[tp] * (s.empty() ? i : i - s.top() - 1);
-      maxarea= max(area,maxarea);
+      int width= s.empty() ? i : i-s.top()-1;
+      maxA= max(maxA, height*width); 
     }
+    s.push(i);
   }
-  while(!s.empty()){
-    tp=s.top();
-    s.pop();
-    area=a[tp] * (s.empty() ? i : i - s.top() -1);
-    maxarea= max(area, maxarea);
-  }
-  cout<<maxarea;
+  cout<<maxA;
 }
 int main()
 {
