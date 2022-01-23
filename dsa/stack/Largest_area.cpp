@@ -70,7 +70,7 @@ void findj(int a[], int n)
       int width= s.empty() ? i : i-s.top()-1;
       maxA= max(maxA, height*width); 
     }
-    s.push(i);
+    s.push(i); 
   }
   cout<<maxA;
 }

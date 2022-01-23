@@ -1,21 +1,19 @@
 #include<iostream>
 #include<stack>
 #include<vector>
-using namespace std;
+using namespace std; 
 
-void prevgreat(vector<int> a, int n){
+
+void maxArea(int a[], int n){
   stack<int> s;
-  s.push(a[0]);
-  for(int i=1;i<n;i++){
-    while(!s.empty() && s.top()<=a[i]) s.pop();
-    int x= s.empty() ? -1 : s.top();
-    cout<<x<<" ";
-    s.push(a[i]);
+  int maxA(0);
+  for(int i=0;i<=n; i++){
+    while( !s.empty() && (i==n || a[s.top()]>=a[i])) s.pop();
+    int h= a[s.top()];
+    int width= s.empty() ? i : i-s.top()-1;
+    int area= h*width;
+    maxA= max(maxA, area);
+    s.push(i);
   }
-}
-
-vector<int> nextgreat(vector<int> a, int n){
-  vector<int>res;
-  int j=n-1;
-  for
+  cout<<maxA;
 }
