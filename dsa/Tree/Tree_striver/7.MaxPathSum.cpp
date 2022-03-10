@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+ #include <bits/stdc++.h>
 using namespace std;
 
 struct Node{
@@ -18,10 +18,10 @@ int findlength(Node* root){
 
   int lh  = findlength(root->left);
   int rh  = findlength(root->right);
+ 
+  maxi=max(lh+rh+root->data, maxi);
 
-  maxi=max(lh+rh, maxi);
-
-  return max(lh,rh)+1;
+  return max(lh,rh)+root->data;
 }
 
 int main(){

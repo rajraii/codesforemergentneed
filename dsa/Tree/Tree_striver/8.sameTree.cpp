@@ -11,18 +11,13 @@ struct Node{
   }
 };
 
-int maxi=0;
-
-int findlength(Node* root){
-  if(root==NULL) return 0;
-
-  int lh  = findlength(root->left);
-  int rh  = findlength(root->right);
-
-  maxi=max(lh+rh, maxi);
-
-  return max(lh,rh)+1;
+bool sameTree(Node* root1, Node* root2){
+  if(root1==NULL || root2==NULL) return root1==root2;
+  return (root1->data==root2->data)
+        && sameTree(root1->left,root2->left) 
+        &&  sameTree(root1->right, root2->right);
 }
+
 
 int main(){
   Node *root = new Node(1);
@@ -30,7 +25,5 @@ int main(){
   root->right       = new Node(3);
   root->left->left  = new Node(4);
   root->left->right = new Node(5);
-  findlength(root);
-  cout<<maxi<<endl;
   return 0;
 }
