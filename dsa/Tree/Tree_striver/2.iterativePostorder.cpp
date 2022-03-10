@@ -31,6 +31,33 @@ vector<int> postorder(Node* root){
   return res;
 }
 
+vector<int> postorder2(Node* root){
+  vector<int> res;
+  stack<Node*> s;
+  Node* curr=root;
+  s.push(curr);
+  while(curr!=NULL || !s.empty()){
+    if(curr!=NULL){
+      s.push(curr);
+      curr=curr->left;
+    }
+    else{
+      Node* temp=s.top()->right;
+      if(temp==NULL){
+        temp=s.top();
+        s.pop();
+        res.push_back(temp->data);
+        while(!s.empty() || temp ==s.top()->right){
+          temp=s.top(), s.pop();
+          res.push_back(temp->data);
+        }
+      }
+      else curr=temp;
+    }
+  }
+  return res;
+}
+
 int main(){
 
 return 0;
