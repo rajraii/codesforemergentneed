@@ -11,7 +11,8 @@ void print(string a, string res=""){
   print(a.substr(1),res+a[0]);
   print(a.substr(1),res);
 }
+
 int main(){
-  string a="abc";
+  string a="aa,bb,cc";
   print(a);
 }
