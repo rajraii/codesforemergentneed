@@ -1,35 +1,16 @@
-
-
-
 #include <bits/stdc++.h>
 using namespace std;
 
-// void rec( int n, int m, int r, int c, string res){
-//   if(r>n || c>m){
-//     return ;
-//   }
-//   if(r==n && c==m){
-//     // cout<<"Yes"<<endl;
-//     cout<<res<<endl;
-//     return;
-//   }
-//   for(int ms= 1; ms<=n-c;ms++){
-//     rec(n,m,r,c+ms,res+"h"+to_string(ms));
-//   }  
-//   for(int ms= 1; ms<=n-r;ms++){
-//     rec(n,m,r+ms,c,res+"v"+to_string(ms));
-//   }  
-//   for(int ms=1; ms<=n-r && ms<=m-c;ms++){
-//     rec(n,m,r+ms,c+ms,res+"d"+to_string(ms));
-//   } 
-// }
-
-
-
+void rec(string a, string res){
+  if(a.length()==0) {
+    cout<<res<<endl;
+    return;
+  }
+  rec(a.substr(1),res+a[0]);
+  rec(a.substr(1),res);
+}
 
 int main(){
-
-// rec(2,2,1,1,"");
-
+  rec("abc","");
 return 0;
 }
